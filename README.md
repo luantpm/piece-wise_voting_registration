@@ -1,6 +1,9 @@
-# piece-wise_voting_registration
+# A Registration Method on Piece-wise Voting for Low Overlapping 3D Point Clouds
 Piece-wise Hough-voting-based registration method for low overlapping 3D point clouds.
 
+The relevant research paper can be accessed online here:
+
+https://www.iieej.org/journal/trans-on-ievc-vol-9-no-2/
 
 If you find this code useful, please cite as:
 
