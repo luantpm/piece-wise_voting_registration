@@ -8,6 +8,7 @@
 #include <chrono>
 #include <thread>
 #include <cmath>
+#include <fstream>
 
 // Supervoxel segmentation parameters
 #define VOXEL_RESOLUTION 2.5f
@@ -454,7 +455,7 @@ int main(int argc, char **argv) {
     // Summary file
     std::stringstream summary_file_name;
     summary_file_name << output_base_name.str() << "_SUMMARY.txt";
-    ofstream summary_file;
+    std::ofstream summary_file;
     summary_file.open(summary_file_name.str());
 
 
@@ -503,7 +504,7 @@ int main(int argc, char **argv) {
     // Print out the binning on terminal and data file
     std::stringstream transformations_data_file;
     transformations_data_file << output_base_name.str() << "_BINS_DATA.csv";
-    ofstream transformations_data_file_header (transformations_data_file.str());
+    std::ofstream transformations_data_file_header (transformations_data_file.str());
     transformations_data_file_header << "No, bQw, bQx, bQy, bQz, bTx, bTy, bTz, votes, angle, psi" << endl;
     PrintAccumulatorAndMetrics(aux_accumulator, votes_v, psi_v, r_angles_v, transformations_data_file);
 

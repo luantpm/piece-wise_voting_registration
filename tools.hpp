@@ -122,7 +122,7 @@ void EulerAnglesToMatrix(std::vector<double> &transformation_vector, Eigen::Matr
 
 
 
-void boundingBox(const XYZCloud&maxPoint);
+void boundingBox(const pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud, pcl::PointXYZ &minPoint, pcl::PointXYZ &maxPoint);
 
 
 
